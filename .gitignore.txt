@@ -1,4 +1,3 @@
 config/
 
-*.log
-
+mysqlconnection.py
