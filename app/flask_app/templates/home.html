@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+{% extends "layout.html" %}
+{% block header %}
+    <p>My Wall</p>
+{% endblock %}
+
+{% block intro_main %}
+    <div class="main-bio">
+        <div class="new-parcel">
+            <form action="/parcel/new" method="post">
+                {% with messages = get_flashed_messages(category_filter=['parcels']) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <div class="form-group">
+                    <label for="parcel"></label>
+                    <textarea placeholder="Leave a (hopefully nice) note" name="parcel"></textarea>
+                </div>
+                <input type="submit" class="btn btn-success" value="Add">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block all_main %}
+    {% for one_parcel in all_parcels %}
+    <div class="parcels">
+        <p class="parcel">{{ one_parcel.parcel}}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
+<!--side content-->
+{% block bio %}
+    <div class="bio-header">
+        <h4>Hello there</h4><br>
+        <div class="bio-text">
+            <p>My name is Brooke and BLAH Ullamco mollit officia eu mollit aute reprehenderit reprehenderit dolor labore voluptate. Adipisicing sit mollit dolor cupidatat voluptate ipsum cupidatat exercitation ea reprehenderit. Esse commodo laboris cillum aliqua.</p>
+            <p>Now at this point you may be thinking "this doesn't look like a full-stack website". Well, you're right! I wanted something small to introduce myself with and keep it more front-end friendly. However this website is completely scalable, and I have projects over on Github fa-github that reflect my full-stack skills.</p><br>
+            <p>Officia et magna ullamco nisi sunt exercitation reprehenderit anim nisi dolore ex. Est adipisicing sunt do nisi do est labore culpa esse irure reprehenderit sint excepteur. Enim labore consectetur dolore adipisicing eiusmod cupidatat anim amet.</p>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    background-color: #1a1a1a;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Roboto';
+    color: teal;
+}
+
+/* layout */
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #2196F3;
+    border: .25vh solid #ff00ff;
+}
+
+
+.nav-links {
+    top: 10vh;
+    left: 1vh;
+    position: fixed;
+    border-right: .25vh solid #ff00ff;
+}
+
+.header-info, .page-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    border: .25vh solid #ff00ff;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    border: .25vh solid #ff00ff;
+}
+
+.top-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 75%;
+    margin: .5vh;
+    margin-left: 10vh;
+}
+
+.intro-main, .all-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5vh;
+}
+
+.parcels {
+    width: 55vh;
+    height: 15vh;
+    background-color: #3d004d;
+    margin: .5vh;
+}
+
+.parcel {
+    background-color: #3d004d;
+    margin: .5vh;
+}
+
+.side-col {
+    flex-basis: 25%;
+    border-left: .25vh solid #ff00ff;
+    margin: .5vh;
+}
+
+.bio-header, .bio-text {
+    margin: .5vh;
+}
+
+
+
+.titles {
+    color: orange;
+    font-weight: bold;
+    font-size: large;
+}
+
+.skill {
+    list-style: none;
+    padding-left: 3vh;
+    color: teal;
+    
+}
+
+.skills, .skill::before {
+    content: "\2022";
+    color: purple;
+    list-style-type: square;
+    margin-left: .5vh;
+}
+
+textarea {
+    width: 45vh;
+    height: 20vh;
+    background-color: #3d0066;
+    font-size: 2vh;
+    resize: none;
+}
+
+input[type=submit] {
+    background:#15d1ce; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 25vh;
+    width: 15vh;
+    height: 5vh;
+}
+
+.navs {
+    list-style-type: none;
+    text-align: center;
+}
+
+.fa, .navs {
+    text-decoration: none;
+    font-size: 5vh;
+    padding: .5vh;
+    color: #ff00ff;
+}
+
+.fa:hover {
+    color: blueviolet;
+}
+
+a {
+    color: #ff00ff;
+}
+
+h2, h3, h4 {
+    color: purple;
+}

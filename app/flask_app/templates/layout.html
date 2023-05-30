@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- <link rel="stylesheet" type="text/css" href="C:\Users\LocalAdmin\Documents\brixtronix\app\flask_app\static\css\style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+    
+<body>
+    <div class="flex-wrapper">
+            <!-- vertical navbar -->
+        <div class="nav-links">
+                <ul>
+                    <li class="navs"><a href="/home" class="fa fa-home"></a></li>
+                    <li><a href="/work" class="fa fa-file-code-o"></a></li>
+                    <li><a href="#talk" class="fa fa-comments-o"></a></li>
+                    <li><a href="#find" class="fa fa-search	"></a></li>
+                    <li class="fa fa-ellipsis-h"></li>
+                    <li><a href="https://github.com/brixtronix" class="fa fa-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/brooke-turnbull-2216a098/" class="fa fa-linkedin"></a></li>
+                    <li><a href="https://bandcamp.com/brixtronix" class="fa fa-bandcamp"></a></li>
+                    <li><a href="brixtonaccidental@gmail.com" class="fa fa-envelope-o"></a></li>
+                    <li><a href="/logout" class="fa fa-sign-out"></a></li>
+                </ul>
+        </div>
+            <!--header content-->
+            <div class="header-info">
+                {% block header %}
+                {% endblock %}
+            </div>
+            <!--main content-->
+            <div class="main-content">
+                <div class="top-main">
+                    <div class="intro-main">
+                        {% block intro_main %}
+                        {% endblock %}
+                    </div>
+                    <div class="all-main">
+                        {% block all_main %}
+                        {% endblock %}
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="some-bio">
+                        {% block bio %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <!--footer content-->
+            <div class="page-footer">
+                <p>Thanks for reading!</p>
+            </div>
+    </div>
+</body>
+</html>
